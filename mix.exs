@@ -44,7 +44,7 @@ defmodule Cron.MixProject do
     [
       coveralls: :test,
       "coveralls.detail": :test,
-      "coveralls.post": :test,
+      "coveralls.github": :test,
       "coveralls.html": :test
     ]
   end
@@ -58,8 +58,7 @@ defmodule Cron.MixProject do
 
   defp deps do
     [
-      {:benchee, "~> 1.0.0", only: :dev},
-      {:benchee_dsl, "~> 0.1.0", only: :dev},
+      {:benchee_dsl, "~> 0.1", only: :dev},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
