@@ -1,6 +1,6 @@
 # Cron
 [![Hex.pm: version](https://img.shields.io/hexpm/v/cron.svg?style=flat-square)](https://hex.pm/packages/cron)
-[![GitHub: CI status](https://img.shields.io/github/workflow/status/hrzndhrn/cron/CI?style=flat-square)](https://github.com/hrzndhrn/cron/actions)
+[![GitHub: CI status](https://img.shields.io/github/actions/workflow/status/hrzndhrn/cron/ci.yml?branch=main&style=flat-square)](https://github.com/hrzndhrn/cron/actions)
 [![Coveralls: coverage](https://img.shields.io/coveralls/github/hrzndhrn/cron?style=flat-square)](https://coveralls.io/github/hrzndhrn/cron)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/hrzndhrn/cron/blob/main/LICENSE.md)
 
