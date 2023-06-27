@@ -64,6 +64,7 @@ defmodule Cron.MixProject do
       {:excoveralls, "~> 0.10", only: :test},
       {:ex_doc, "~> 0.25", only: :dev, runtime: false},
       {:prove, "~> 0.1", only: [:dev, :test]},
+      {:recode, "~> 0.5", only: :dev},
       {:stream_data, "~> 0.5", only: [:dev, :test]}
     ]
   end
