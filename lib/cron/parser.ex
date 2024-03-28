@@ -87,16 +87,16 @@ defmodule Cron.Parser do
 
   defp parse(string, field, range) do
     cond do
-      is_int?(string) ->
+      int?(string) ->
         parse_int(string, field, range)
 
-      is_multi?(string) ->
+      multi?(string) ->
         parse_multi(string, field)
 
-      is_step?(string) ->
+      step?(string) ->
         parse_step(string, field, range)
 
-      is_range?(string) ->
+      range?(string) ->
         parse_range(string, field, range)
 
       field == :day_of_week ->
@@ -110,13 +110,13 @@ defmodule Cron.Parser do
     end
   end
 
-  defp is_int?(string), do: String.match?(string, ~r/^[0-9]+$/)
+  defp int?(string), do: String.match?(string, ~r/^[0-9]+$/)
 
-  defp is_multi?(string), do: String.match?(string, ~r/^.+,.+$/)
+  defp multi?(string), do: String.match?(string, ~r/^.+,.+$/)
 
-  defp is_range?(string), do: String.match?(string, ~r/^.+-.+$/)
+  defp range?(string), do: String.match?(string, ~r/^.+-.+$/)
 
-  defp is_step?(string), do: String.match?(string, ~r/^.+\/.+$/)
+  defp step?(string), do: String.match?(string, ~r/^.+\/.+$/)
 
   defp parse_int(string, field, range) do
     value = String.to_integer(string)
