@@ -8,7 +8,7 @@ defmodule Cron.MixProject do
     [
       app: :cron,
       version: @version,
-      elixir: "~> 1.11",
+      elixir: "~> 1.12",
       name: "Cron",
       description: description(),
       docs: docs(),
