@@ -59,12 +59,12 @@ defmodule Cron.MixProject do
   defp deps do
     [
       {:benchee_dsl, "~> 0.1", only: :dev},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
-      {:excoveralls, "~> 0.10", only: :test},
-      {:ex_doc, "~> 0.25", only: :dev, runtime: false},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.4", only: [:dev], runtime: false},
+      {:excoveralls, "~> 0.18", only: :test},
+      {:ex_doc, "~> 0.32", only: :dev, runtime: false},
       {:prove, "~> 0.1", only: [:dev, :test]},
-      {:recode, "~> 0.5", only: :dev},
+      {:recode, "~> 0.7", only: :dev},
       {:stream_data, "~> 0.5", only: [:dev, :test]}
     ]
   end
