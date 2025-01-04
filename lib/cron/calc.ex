@@ -262,12 +262,12 @@ defmodule Cron.Calc do
     end
   end
 
-  defp value(actual, [first | _] = list, :asc) do
+  defp value(actual, [first | _rest] = list, :asc) do
     Enum.find(list, first, fn value -> value >= actual end)
   end
 
-  defp value(actual, [_ | _] = list, :desc) do
-    [first | _] = list = Enum.reverse(list)
+  defp value(actual, [_head | _tail] = list, :desc) do
+    [first | _rest] = list = Enum.reverse(list)
     Enum.find(list, first, fn value -> value <= actual end)
   end
 

@@ -170,7 +170,7 @@ defmodule Cron.Parser do
   end
 
   defp parse_multi(string, field) do
-    with [_ | _] = list <- do_parse_multi(string, field) do
+    with [_head | _tail] = list <- do_parse_multi(string, field) do
       {:ok, expand(list)}
     end
   end
@@ -236,7 +236,7 @@ defmodule Cron.Parser do
 
   defp valid?(_day_month), do: false
 
-  defp min_day([min | _]), do: min
+  defp min_day([min | _rest]), do: min
 
   defp min_day(%Range{first: first}), do: first
 

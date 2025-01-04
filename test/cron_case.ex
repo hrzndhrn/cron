@@ -75,7 +75,7 @@ defmodule CronCase do
       defp match?(cron, field, value) do
         case Map.fetch!(cron, field) do
           %Range{} = range -> value in range
-          [_ | _] = list -> Enum.member?(list, value)
+          [_head | _tail] = list -> Enum.member?(list, value)
           int -> int == value
         end
       end
