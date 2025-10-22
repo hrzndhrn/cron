@@ -17,7 +17,6 @@ defmodule Cron.MixProject do
       dialyzer: dialyzer(),
       test_coverage: [tool: ExCoveralls],
       package: package(),
-      preferred_cli_env: preferred_cli_env(),
       source_url: @source_url
     ]
   end
@@ -26,26 +25,28 @@ defmodule Cron.MixProject do
     "Cron parses cron expressions and calculates execution timings."
   end
 
-  defp docs do
-    [
-      source_ref: "v#{@version}",
-      main: "Cron",
-      formatters: ["html"]
-    ]
-  end
-
   def application do
     [
       extra_applications: [:logger]
     ]
   end
 
-  def preferred_cli_env do
+  def cli do
     [
-      coveralls: :test,
-      "coveralls.detail": :test,
-      "coveralls.github": :test,
-      "coveralls.html": :test
+      preferred_envs: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.github": :test,
+        "coveralls.html": :test
+      ]
+    ]
+  end
+
+  defp docs do
+    [
+      source_ref: "v#{@version}",
+      main: "Cron",
+      formatters: ["html"]
     ]
   end
 
