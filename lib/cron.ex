@@ -502,7 +502,7 @@ defmodule Cron do
     * `:from` - the start datetime.
       Defaults to `NaiveDateTime.utc_now("Etc/UTC")`.
 
-    * `:oder` - `:asc` or `:desc` to get execution datetimes before or after
+    * `:order` - `:asc` or `:desc` to get execution datetimes before or after
       start datetime. Defaults to `:asc`.
 
   ## Examples

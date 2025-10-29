@@ -8,12 +8,12 @@ defmodule CronTest do
   end
 
   describe "new/1" do
-    test "retruns an ok tuple with cron struct for an expression with 5 fields" do
+    test "returns an ok tuple with cron struct for an expression with 5 fields" do
       expression = "5 * * * *"
       assert Cron.new(expression) == {:ok, %Cron{expression: expression, minute: 5, second: 0}}
     end
 
-    test "retruns an ok tuple with cron struct for an expression with 6 fields" do
+    test "returns an ok tuple with cron struct for an expression with 6 fields" do
       expression = "10 5 * * * *"
       assert Cron.new(expression) == {:ok, %Cron{expression: expression, minute: 5, second: 10}}
     end
